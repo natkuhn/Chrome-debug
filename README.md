@@ -24,12 +24,19 @@ Apparently it is possible to use Automator to turn a shell script into an app, b
 various ways that used to work that are now broken, and one [simple way that still works](https://apple.stackexchange.com/a/269045/102436).
 There is also a way to make a double-clickable shell script, but it will open a Terminal window.
 
-This repo contains the "Chrome-debug" app, and an icon to paste on it, which is basically the Chrome icon with "9222" written on it so 
-remember that this is the debugging version of Chrome.
+This repo contains the "Chrome-debug" app, and an icon to paste on it, which is basically the Chrome icon with "9222" written on it 
+so as to remember that this is the debugging version of Chrome.
 
 To make it work, you will probably need to, in the root of the project:
 
 `chmod +x Chrome-debug.app/Chrome-debug`
 
-Also, open `chrome-debug-icon.png` (not `.psd`) in Preview, select all, and copy. Right-click the `Chrome-debug` app > Get Info. Click 
-on the small icon in the upper-lefthand corner, and hit paste. The correct icon should now be attached to the "app."
+Also, open `chrome-debug-icon.png` (not `.psd`) in Preview, select all, and copy. Right-click the `Chrome-debug` app > Get Info. 
+Click on the small icon in the upper-lefthand corner, and hit paste. The correct icon should now be attached to the "app."
+
+The guts of is  this one-line shell script (yes, I did not use `sudo`):
+
+```
+#!/bin/bash
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222&
+```
