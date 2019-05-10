@@ -27,9 +27,11 @@ There is also a way to make a double-clickable shell script, but it will open a 
 This repo contains the "Chrome-debug" app, and an icon to paste on it, which is basically the Chrome icon with "9222" written on it 
 so as to remember that this is the debugging version of Chrome.
 
-To make it work, you will probably need to, in the root of the project:
+To make it work, may need to execute this shell command
 
 `chmod +x Chrome-debug.app/Chrome-debug`
+
+in the root of the project (I didn't, when I tested it).
 
 Also, open `chrome-debug-icon.png` (not `.psd`) in Preview, select all, and copy. Right-click the `Chrome-debug` app > Get Info. 
 Click on the small icon in the upper-lefthand corner, and hit paste. The correct icon should now be attached to the "app."
@@ -40,3 +42,9 @@ The guts of is  this one-line shell script (yes, I did not use `sudo`):
 #!/bin/bash
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222&
 ```
+
+It shouldn't be too difficult to build a more robust "bundle" which would not need to have the custom icon pasted on. It would involved building a bundle with a `plist` file, either by hand or by using Xcode. But that would be a project for another day.
+
+https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html
+
+https://developer.apple.com/library/archive/documentation/CoreFoundation/Conceptual/CFBundles/BundleTypes/BundleTypes.html#//apple_ref/doc/uid/10000123i-CH101-SW1
