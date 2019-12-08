@@ -54,11 +54,11 @@ I would like to be able to attach the VS Code debugger to this instance, but it 
 > 3. Do I really need the `sudo` in the line above? Some sources do not have it.
 > 4. Alternatively, is there a way to create a desktop/toolbar shortcut to chrome that will start it will remote debugging enabled?
 
-Apparently it is possible to use Automator to turn a shell script into an app (Edit: a later commenter supplied a [link to instructions] (https://stackoverflow.com/a/59164839/1527750), but before I learned that, I found out that there are 
+Apparently it is possible to use Automator to turn a shell script into an app [Edit: a later commenter supplied a [link to instructions](https://stackoverflow.com/a/59164839/1527750)], but before I learned that, I found out that there are 
 various ways that used to work that are now broken, and one [simple way that still works](https://apple.stackexchange.com/a/269045/102436).
 There is also a way to make a double-clickable shell script, but it will open a Terminal window.
 
-It shouldn't be too difficult to build a more robust "bundle" which would not need to have the custom icon pasted on. It would involved building a bundle with a `plist` file, either by hand or by using Xcode. But that would be a project for another day. (Edit: and once I figured out that I could just put this on a dmg, this approach doesn't seem worth the bother.)
+It shouldn't be too difficult to build a more robust "bundle" which would not need to have the custom icon pasted on. It would involved building a bundle with a `plist` file, either by hand or by using Xcode. But that would be a project for another day. [Edit: and once I figured out that I could just put this on a dmg, this approach doesn't seem worth the bother.]
 
 https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html
 
