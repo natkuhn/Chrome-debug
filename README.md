@@ -13,6 +13,8 @@ I made a double-clickable icon which will start chrome in "remote debugging" mod
 
 *Note:* When you run this, you get another instance of Chrome running with the standard Chrome icon. I.e., if you put it in the dock and click on it, you do not get the usual dot by it saying it's running.
 
+*Other note:* This is a double-clickable app(let). There is no need to mess with bash paths, etc.
+
 #### What's in the repo, if you want to do it the hard(er) way:
 
 This repo contains the "Chrome-debug" app, and an icon to paste on it, which is basically the Chrome icon with "9222" written on it 
